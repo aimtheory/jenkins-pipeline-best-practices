@@ -109,7 +109,7 @@ An original design we had was that `Jenkinsfiles` could actually just look more 
 @Library('jenkins-pipeline-library') _
 runPipeline()
 ```
-and `runPipeline()` would just read the the project type from `pipeline.yaml` and dynamically run the proper function, like `pythonPipeline()`, `rubyPipeline()` or `nodeJSPipeline()`. But once again, because pipeline are really only quasi-Groovy, this isn't possible, and it's confirmed here: https://issues.jenkins-ci.org/browse/JENKINS-37210. So the downside is that each project would have to have a different-looking `Jenkinsfile`. But we're not done looking for a solution to that!
+and `runPipeline()` would just read the the project type from `pipeline.yaml` and dynamically run the proper function, like `pythonPipeline()`, `rubyPipeline()` or `nodeJSPipeline()`. But once again, because pipelines are really only quasi-Groovy, this isn't possible, and it's confirmed here: [https://issues.jenkins-ci.org/browse/JENKINS-37210](https://issues.jenkins-ci.org/browse/JENKINS-3721). So the downside is that each project would have to have a different-looking `Jenkinsfile`. But we're not done looking for a solution to that!
 
 So, what do you think? We would love to hear your comments about this approach. In conclusion:
 - Shield developers from Jenkins Pipelines and Groovy by adding a level of abstraction
